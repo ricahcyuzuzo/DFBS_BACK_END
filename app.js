@@ -17,9 +17,11 @@ app.get("/", (req, res) => {
 });
 
 const usersRoute = require("./routes/users");
+const transactionsRoute = require("./routes/transactions");
 const currenciesRoute = require("./routes/currencies");
 app.use("/api/users/", usersRoute);
 app.use("/api/currencies/", currenciesRoute);
+app.use("/api/transactions/", transactionsRoute);
 
 //404 route
 app.use("*", (req, res) => {
