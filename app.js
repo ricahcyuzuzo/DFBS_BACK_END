@@ -17,7 +17,9 @@ app.get("/", (req, res) => {
 });
 
 const usersRoute = require("./routes/users");
+const currenciesRoute = require("./routes/currencies");
 app.use("/api/users/", usersRoute);
+app.use("/api/currencies/", currenciesRoute);
 
 //404 route
 app.use("*", (req, res) => {
