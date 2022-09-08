@@ -20,6 +20,7 @@ router.post("/save/", auth, async (req, res) => {
     toCurrency,
     amountPaid,
     amountToGet,
+    toAccount,
     status,
   } = req.body;
   try {
@@ -30,6 +31,7 @@ router.post("/save/", auth, async (req, res) => {
       amountPaid,
       amountToGet,
       status,
+      toAccount,
       userId: req.user.user_id,
     });
     return res.status(200).send({ msg: "transaction saved!" });

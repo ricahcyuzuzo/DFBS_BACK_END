@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   amountToGet: { type: String, required: true },
   phoneOrAccount: { type: String, required: true },
   status: { type: String, required: true },
-  received: { type: Boolean, required: true, default: false },
+  toAccount: { type: String, required: true },
   createdAt: { type: String, default: new Date() },
 });
 

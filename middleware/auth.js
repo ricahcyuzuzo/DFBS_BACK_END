@@ -11,7 +11,7 @@ const verifyToken = (req, res, next) => {
     });
   }
   try {
-    const decoded = jwt.verify(token, process.env.TOKEN_KEY);
+    const decoded = jwt.verify(token, 'kigali123');
     req.user = decoded;
   } catch (err) {
     return res.status(401).send({ msg: "invalid token", tokenError: true });

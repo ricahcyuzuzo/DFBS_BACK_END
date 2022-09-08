@@ -13,7 +13,7 @@ const verifyToken = (token) => {
     return false;
   }
   try {
-    return jwt.verify(token, process.env.TOKEN_KEY);
+    return jwt.verify(token, 'kigali123');
   } catch (err) {
     return false;
   }

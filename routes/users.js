@@ -31,7 +31,7 @@ router.post("/login", async (req, res) => {
           companyName: user.companyName,
           fullName: user.fullName,
         },
-        process.env.TOKEN_KEY,
+        'kigali123',
         {
           expiresIn: "2h",
         }
@@ -186,7 +186,7 @@ router.post("/register", async (req, res) => {
         createdAt: user.createdAt,
         address,
       },
-      process.env.TOKEN_KEY,
+      'kigali123',
       {
         expiresIn: "2h",
       }
